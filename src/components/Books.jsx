@@ -23,7 +23,7 @@ function Books() {
 
     // Fetch books based on genre
     if (genre) {
-      axios.get(`http://localhost:5000/books?genre=${genre}`)
+      axios.get(`https://wcn-mpr-backend-93c7.onrender.com/books?genre=${genre}`)
         .then(response => setBooks(response.data))
         .catch(error => console.error('Error fetching books:', error));
     }
