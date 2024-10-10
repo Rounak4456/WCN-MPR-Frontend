@@ -79,7 +79,7 @@ const Payment = () => {
   const clearCart = async () => {
     const userID = localStorage.getItem('userID');
     try {
-      await axios.delete(`http://localhost:5000/cart/clear`, { data: { userId: userID } });
+      await axios.delete(`https://wcn-mpr-backend-93c7.onrender.com/cart/clear`, { data: { userId: userID } });
       // Clear local storage or update your state management solution
       localStorage.removeItem('cart');
       // If you're using a state management library like Redux, dispatch an action to clear the cart
