@@ -18,7 +18,7 @@ function Cart() {
             }
 
             try {
-                const response = await axios.get(`http://localhost:5000/cart/get/${userID}`);
+                const response = await axios.get(`https://wcn-mpr-backend-93c7.onrender.com/cart/get/${userID}`);
                 setSavedBooks(response.data.savedBooks);
                 setLoading(false);
             } catch (err) {
@@ -42,7 +42,7 @@ function Cart() {
 
         try {
             console.log(`Sending DELETE request to: http://localhost:5000/cart/${userID}/${bookId}`);
-            const response = await axios.delete(`http://localhost:5000/cart/${userID}/${bookId}`);
+            const response = await axios.delete(`https://wcn-mpr-backend-93c7.onrender.com/cart/${userID}/${bookId}`);
             console.log('Server response:', response.data);
 
             setSavedBooks(prevSavedBooks => {
